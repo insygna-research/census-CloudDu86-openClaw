@@ -1,4 +1,6 @@
-FROM node:22-slim
+# Node 24: openclaw@latest requires Node >=24.16 (its preinstall refuses Node 22). Bookworm kept so the
+# apt and pip steps below behave as before.
+FROM node:24-bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
